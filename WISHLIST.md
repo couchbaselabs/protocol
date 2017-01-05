@@ -21,3 +21,5 @@ Let's collaborate on a feature wish-list. Not sorted yet.
 ## 2. Good to Have
  - Zero-Copy access
  - wireshark dissector
+ - protocol state machine to grasp whats going on
+ - codegen into languages
