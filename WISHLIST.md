@@ -17,6 +17,7 @@ Let's collaborate on a feature wish-list. Not sorted yet.
    - fire-and-forget (no response)
    - event subscription (infinite stream of many)
    - channel (bi-directional streams)
+ - compression support
  
 ## 2. Good to Have
  - Zero-Copy access
