@@ -43,3 +43,18 @@ Consider a layered approach.  For example...
    - machine parsable protocol
    - protocol state machine to grasp whats going on
    - codegen into languages
+   - proxy'ability
+     - ability to add new commands/messages and an intermediary proxy would need zero changes to support the new commands/messages
+   - shared set of common error codes
+   - namespaces for feature specific errors
+   - request tracing identifiers
+     - example: this activity on node Y was due originally to a user request that came into node X
+   - common approach to timeouts
+   - common approach to consistency (stale=very, at-plus, request-plus, etc)
+   - consistency to not-my-vbucket / not-my-resource / redirect / CCCP handling
+   - versioning rules
+   - stats
+     - common stats naming consistency ("cpu", "Cpu", "RAM", "memused", "rss")
+     - self-describing stats metadata or naming to allow for automatic aggregation
+       - For example, by using the right prefix or suffix ("totalRequests" vs "numConnections"), a stats collector can assume whether a stat is a ever-growing counter or a current-value gauge.  As new stats are added by independent teams, the stats collector should need zero changes.
+     - a feature server might publish metadata of titles and descriptions for its stats (just a json thing?), which a UI can automatically display.
