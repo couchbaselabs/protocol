@@ -15,17 +15,19 @@ Consider a layered approach.  For example...
  - a set of protocol specs on a per-feature level
    - For example, FTS would have its own spec, with its own FTS-specific commands/messages/state-transitions.
 
-    -------------------------------------------------------
-    | FTS protocol    | Foo protocol    | Bar protocol    |
-    -------------------------------------------------------
-    | common shared tools / codegen                       | ex: state machine parser / doc generator / CI integration
-    -------------------------------------------------------
-    | common base concerns / policy / guidelines          | ex: "param names *should* be pascalCase"
-    -------------------------------------------------------
-    | choice of payload/message encoding                  | ex: protobuf vs flatbuffer
-    -------------------------------------------------------
-    | choice of transport                                 | ex: grpc over HTTP/2
-    -------------------------------------------------------
+The layers in more diagrammatic format...
+
+     -------------------------------------------------------
+     | FTS protocol    | Foo protocol    | Bar protocol    |
+     -------------------------------------------------------
+     | common shared tools / codegen                       | ex: state machine parser / doc generator / CI integration
+     -------------------------------------------------------
+     | common base concerns / policy / guidelines          | ex: "param names *should* be pascalCase"
+     -------------------------------------------------------
+     | choice of payload/message encoding                  | ex: protobuf vs flatbuffer
+     -------------------------------------------------------
+     | choice of transport                                 | ex: grpc over HTTP/2
+     -------------------------------------------------------
 
 ## 1. Required
  - transport level concerns
