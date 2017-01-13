@@ -33,6 +33,8 @@ The layers in more diagrammatic format...
  - transport level concerns
    - reliable delivery
    - binary protocol
+   - method of gracefully signalling a goodbye
+     - may want a "goodbye because this service endpoint is going away"
    - must scale to high throughput & low latency
    - encryption & auth
    - pipeline support
@@ -44,6 +46,7 @@ The layers in more diagrammatic format...
      - event subscription (infinite stream of many)
      - channel (bi-directional streams)
    - compression support
+     - with flexible compression algos and maybe an extension point
    - channels
  - payload/message encoding concerns
    - deterministic field access O(1), not O(n)
@@ -55,7 +58,7 @@ The layers in more diagrammatic format...
    - zero-copy access
  - cross-cutting policy concerns
    - machine parsable protocol
-   - protocol state machine to grasp whats going on
+   - protocol state machine to grasp whats going on and verify correctness
    - codegen into languages
    - proxy'ability
      - ability to add new commands/messages and an intermediary proxy would need zero changes to support the new commands/messages
